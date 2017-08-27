@@ -2569,7 +2569,6 @@ var EditorViewModel = (function() {
         }
 
         getCoordinator();
-
       }
     };
 
@@ -2620,7 +2619,7 @@ var EditorViewModel = (function() {
       });
       if (typeof notebook.presentationSnippets != "undefined" && notebook.presentationSnippets != null) { // Load
         $.each(notebook.presentationSnippets, function(key, snippet) {
-          var _snippet = new Snippet(vm, self, snippet);
+          var _snippet = new Snippet(vm, self, snippet);console.log(snippet.progress);
           _snippet.init();
           _snippet.previousChartOptions = vm._getPreviousChartOptions(_snippet);
           self.presentationSnippets()[key] = _snippet;
